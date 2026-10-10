@@ -40,7 +40,6 @@ export const ContactSection: React.FC = () => {
       }
     } catch (err: unknown) {
       console.error('Contact submission error:', err);
-      // Fallback: If external AJAX endpoint fails (e.g. offline), notify and offer mailto
       setErrorMessage(
         'Online submission failed. Please verify your connection or click below to send directly via email.'
       );
@@ -52,15 +51,15 @@ export const ContactSection: React.FC = () => {
   return (
     <footer
       id="contact"
-      className="relative w-full bg-black text-[#E8DFD8] font-sans selection:bg-[#cbb59d] selection:text-black pt-16 pb-16 px-6 sm:px-12 lg:px-20 overflow-hidden"
+      className="relative w-full bg-black text-[#E8DFD8] font-sans selection:bg-[#cbb59d] selection:text-black pt-12 sm:pt-16 pb-12 sm:pb-16 px-5 xs:px-6 sm:px-12 lg:px-20 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto w-full relative z-10">
         
         {/* Split Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           
           {/* Left Column (5 Cols) */}
-          <div className="lg:col-span-5 flex flex-col justify-between space-y-8">
+          <div className="lg:col-span-5 flex flex-col justify-between space-y-6 sm:space-y-8">
             <div>
               {/* Eyebrow Header */}
               <motion.div
@@ -68,10 +67,10 @@ export const ContactSection: React.FC = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="flex items-center space-x-4 mb-5"
+                className="flex items-center space-x-4 mb-4 sm:mb-5"
               >
                 <span
-                  className="text-[11px] font-medium tracking-[0.35em] uppercase text-[#D4AF37]"
+                  className="text-[10px] sm:text-[11px] font-medium tracking-[0.35em] uppercase text-[#D4AF37]"
                   style={{ fontFamily: "'Montserrat', sans-serif" }}
                 >
                   05 / CONTACT
@@ -85,10 +84,10 @@ export const ContactSection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="mb-8"
+                className="mb-6 sm:mb-8"
               >
                 <h2
-                  className="text-5xl sm:text-6xl md:text-7xl tracking-tight uppercase leading-[0.85] select-none"
+                  className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl tracking-tight uppercase leading-[0.85] select-none"
                   style={{ fontFamily: "'Bebas Neue', sans-serif" }}
                 >
                   <span className="block text-transparent bg-clip-text bg-gradient-to-b from-[#FFFFFF] via-[#D5CBC0] to-[#605448] drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
@@ -101,61 +100,61 @@ export const ContactSection: React.FC = () => {
               </motion.div>
 
               <p
-                className="text-xs sm:text-[13px] font-light text-[#A8988B] leading-relaxed max-w-md mb-8"
+                className="text-xs sm:text-[13px] font-light text-[#A8988B] leading-relaxed max-w-md mb-6 sm:mb-8"
                 style={{ fontFamily: "'Montserrat', sans-serif" }}
               >
                 Open for software engineering roles, web development projects, AI/ML initiatives, or technical inquiries. Fill out the dispatch form and your message will be forwarded directly to my mailbox.
               </p>
 
               {/* Direct Channels Cards */}
-              <div className="space-y-3.5">
+              <div className="space-y-3">
                 {/* Email */}
                 <a
                   href="mailto:darshildetroja@gmail.com"
-                  className="p-3.5 rounded-sm border border-[#8C6D4F]/30 bg-[#100D0B] flex items-center justify-between group hover:border-[#D4AF37] transition-all duration-300 block"
+                  className="p-3 sm:p-3.5 rounded-sm border border-[#8C6D4F]/30 bg-[#100D0B] flex items-center justify-between group hover:border-[#D4AF37] transition-all duration-300 block"
                 >
-                  <div className="flex items-center space-x-3">
-                    <span className="text-[10px] font-mono text-[#D4AF37]">EMAIL //</span>
-                    <span className="text-xs text-[#E8DFD8] group-hover:text-white transition-colors" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+                  <div className="flex items-center space-x-2.5 sm:space-x-3">
+                    <span className="text-[9.5px] sm:text-[10px] font-mono text-[#D4AF37]">EMAIL //</span>
+                    <span className="text-xs text-[#E8DFD8] group-hover:text-white transition-colors break-all" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                       darshildetroja@gmail.com
                     </span>
                   </div>
-                  <span className="text-xs text-[#8C6D4F] group-hover:text-[#D4AF37] transition-colors">↗</span>
+                  <span className="text-xs text-[#8C6D4F] group-hover:text-[#D4AF37] transition-colors shrink-0 ml-2">↗</span>
                 </a>
 
                 {/* Phone */}
                 <a
                   href="tel:+918488002969"
-                  className="p-3.5 rounded-sm border border-[#8C6D4F]/30 bg-[#100D0B] flex items-center justify-between group hover:border-[#D4AF37] transition-all duration-300 block"
+                  className="p-3 sm:p-3.5 rounded-sm border border-[#8C6D4F]/30 bg-[#100D0B] flex items-center justify-between group hover:border-[#D4AF37] transition-all duration-300 block"
                 >
-                  <div className="flex items-center space-x-3">
-                    <span className="text-[10px] font-mono text-[#D4AF37]">PHONE //</span>
+                  <div className="flex items-center space-x-2.5 sm:space-x-3">
+                    <span className="text-[9.5px] sm:text-[10px] font-mono text-[#D4AF37]">PHONE //</span>
                     <span className="text-xs text-[#E8DFD8] group-hover:text-white transition-colors" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                       (+91) 8488002969
                     </span>
                   </div>
-                  <span className="text-xs text-[#8C6D4F] group-hover:text-[#D4AF37] transition-colors">↗</span>
+                  <span className="text-xs text-[#8C6D4F] group-hover:text-[#D4AF37] transition-colors shrink-0 ml-2">↗</span>
                 </a>
 
                 {/* Location */}
-                <div className="p-3.5 rounded-sm border border-[#8C6D4F]/20 bg-[#0C0A08] flex items-center justify-between">
-                  <div className="flex items-center space-x-3">
-                    <span className="text-[10px] font-mono text-[#8C6D4F]">LOCATION //</span>
+                <div className="p-3 sm:p-3.5 rounded-sm border border-[#8C6D4F]/20 bg-[#0C0A08] flex items-center justify-between">
+                  <div className="flex items-center space-x-2.5 sm:space-x-3">
+                    <span className="text-[9.5px] sm:text-[10px] font-mono text-[#8C6D4F]">LOCATION //</span>
                     <span className="text-xs text-[#B3A497]" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                       Morbi-363642, Gujarat, India
                     </span>
                   </div>
-                  <span className="text-[10px] font-mono text-[#8C6D4F]">IND</span>
+                  <span className="text-[9.5px] sm:text-[10px] font-mono text-[#8C6D4F] shrink-0 ml-2">IND</span>
                 </div>
               </div>
 
               {/* Social Profiles */}
-              <div className="flex items-center gap-3 pt-6">
+              <div className="flex items-center gap-3 pt-5 sm:pt-6">
                 <a
                   href="https://github.com/Darshil-Detroja"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 py-2.5 px-4 text-center rounded-sm border border-[#8C6D4F]/40 bg-[#120F0C] hover:border-[#D4AF37] hover:bg-[#1A1510] text-[#E8DFD8] hover:text-[#F7E7C4] text-[10px] font-medium tracking-[0.2em] uppercase transition-all duration-300"
+                  className="flex-1 py-2.5 px-3 sm:px-4 text-center rounded-sm border border-[#8C6D4F]/40 bg-[#120F0C] hover:border-[#D4AF37] hover:bg-[#1A1510] text-[#E8DFD8] hover:text-[#F7E7C4] text-[10px] font-medium tracking-[0.2em] uppercase transition-all duration-300"
                   style={{ fontFamily: "'Montserrat', sans-serif" }}
                 >
                   GITHUB ↗
@@ -164,7 +163,7 @@ export const ContactSection: React.FC = () => {
                   href="https://www.linkedin.com/in/darshil-detroja-tech"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 py-2.5 px-4 text-center rounded-sm border border-[#8C6D4F]/40 bg-[#120F0C] hover:border-[#D4AF37] hover:bg-[#1A1510] text-[#E8DFD8] hover:text-[#F7E7C4] text-[10px] font-medium tracking-[0.2em] uppercase transition-all duration-300"
+                  className="flex-1 py-2.5 px-3 sm:px-4 text-center rounded-sm border border-[#8C6D4F]/40 bg-[#120F0C] hover:border-[#D4AF37] hover:bg-[#1A1510] text-[#E8DFD8] hover:text-[#F7E7C4] text-[10px] font-medium tracking-[0.2em] uppercase transition-all duration-300"
                   style={{ fontFamily: "'Montserrat', sans-serif" }}
                 >
                   LINKEDIN ↗
@@ -179,7 +178,7 @@ export const ContactSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="lg:col-span-7 relative w-full rounded-sm border border-[#8C6D4F]/40 bg-[#0A0806] p-8 sm:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.9)] overflow-hidden"
+            className="lg:col-span-7 relative w-full rounded-sm border border-[#8C6D4F]/40 bg-[#0A0806] p-5 xs:p-6 sm:p-8 md:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.9)] overflow-hidden"
           >
             {/* Top Gold Horizon Edge */}
             <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37]/70 to-transparent" />
@@ -191,11 +190,11 @@ export const ContactSection: React.FC = () => {
             <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-[#D4AF37]/60" />
 
             {sent ? (
-              <div className="py-14 text-center space-y-4">
+              <div className="py-12 sm:py-14 text-center space-y-4">
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-[#D4AF37] bg-[#D4AF37]/10 text-[#D4AF37] text-xl font-bold shadow-[0_0_20px_rgba(212,175,55,0.3)]">
                   ✓
                 </div>
-                <h3 className="text-3xl text-white font-normal uppercase" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                <h3 className="text-2xl sm:text-3xl text-white font-normal uppercase" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
                   TRANSMISSION DELIVERED
                 </h3>
                 <p className="text-xs sm:text-[13px] text-[#A8988B] font-light max-w-md mx-auto leading-relaxed" style={{ fontFamily: "'Montserrat', sans-serif" }}>
@@ -215,7 +214,7 @@ export const ContactSection: React.FC = () => {
                 </div>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
                 
                 {errorMessage && (
                   <div className="p-3.5 rounded-sm border border-red-500/40 bg-red-950/20 text-red-300 text-xs flex flex-col sm:flex-row items-center justify-between gap-3">
@@ -229,9 +228,9 @@ export const ContactSection: React.FC = () => {
                   </div>
                 )}
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                   <div>
-                    <span className="block text-[9.5px] font-mono tracking-[0.2em] uppercase text-[#8C6D4F] mb-2">
+                    <span className="block text-[9px] sm:text-[9.5px] font-mono tracking-[0.2em] uppercase text-[#8C6D4F] mb-1.5 sm:mb-2">
                       // SENDER NAME
                     </span>
                     <input
@@ -241,13 +240,13 @@ export const ContactSection: React.FC = () => {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="e.g. Alex Smith"
-                      className="w-full bg-[#120F0C] border border-[#8C6D4F]/30 focus:border-[#D4AF37] text-xs text-white placeholder-[#8C6D4F]/50 px-4 py-3 outline-none rounded-sm transition-colors"
+                      className="w-full bg-[#120F0C] border border-[#8C6D4F]/30 focus:border-[#D4AF37] text-base md:text-xs text-white placeholder-[#8C6D4F]/50 px-3.5 sm:px-4 py-3 outline-none rounded-sm transition-colors"
                       style={{ fontFamily: "'Montserrat', sans-serif" }}
                     />
                   </div>
 
                   <div>
-                    <span className="block text-[9.5px] font-mono tracking-[0.2em] uppercase text-[#8C6D4F] mb-2">
+                    <span className="block text-[9px] sm:text-[9.5px] font-mono tracking-[0.2em] uppercase text-[#8C6D4F] mb-1.5 sm:mb-2">
                       // SENDER EMAIL
                     </span>
                     <input
@@ -257,14 +256,14 @@ export const ContactSection: React.FC = () => {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="e.g. alex@example.com"
-                      className="w-full bg-[#120F0C] border border-[#8C6D4F]/30 focus:border-[#D4AF37] text-xs text-white placeholder-[#8C6D4F]/50 px-4 py-3 outline-none rounded-sm transition-colors"
+                      className="w-full bg-[#120F0C] border border-[#8C6D4F]/30 focus:border-[#D4AF37] text-base md:text-xs text-white placeholder-[#8C6D4F]/50 px-3.5 sm:px-4 py-3 outline-none rounded-sm transition-colors"
                       style={{ fontFamily: "'Montserrat', sans-serif" }}
                     />
                   </div>
                 </div>
 
                 <div>
-                  <span className="block text-[9.5px] font-mono tracking-[0.2em] uppercase text-[#8C6D4F] mb-2">
+                  <span className="block text-[9px] sm:text-[9.5px] font-mono tracking-[0.2em] uppercase text-[#8C6D4F] mb-1.5 sm:mb-2">
                     // MESSAGE CONTENT
                   </span>
                   <textarea
@@ -274,7 +273,7 @@ export const ContactSection: React.FC = () => {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Describe your project, opportunity, or collaboration idea..."
-                    className="w-full bg-[#120F0C] border border-[#8C6D4F]/30 focus:border-[#D4AF37] text-xs text-white placeholder-[#8C6D4F]/50 p-4 outline-none rounded-sm transition-colors resize-none"
+                    className="w-full bg-[#120F0C] border border-[#8C6D4F]/30 focus:border-[#D4AF37] text-base md:text-xs text-white placeholder-[#8C6D4F]/50 p-3.5 sm:p-4 outline-none rounded-sm transition-colors resize-none"
                     style={{ fontFamily: "'Montserrat', sans-serif" }}
                   />
                 </div>
@@ -305,11 +304,11 @@ export const ContactSection: React.FC = () => {
         </div>
 
         {/* System Footer Line */}
-        <div className="pt-16 mt-16 border-t border-[#8C6D4F]/15 flex flex-col sm:flex-row items-center justify-between text-center sm:text-left gap-4">
-          <span className="text-[10px] font-mono tracking-widest text-[#8C6D4F] uppercase">
+        <div className="pt-12 sm:pt-16 mt-12 sm:mt-16 border-t border-[#8C6D4F]/15 flex flex-col sm:flex-row items-center justify-between text-center sm:text-left gap-3 sm:gap-4">
+          <span className="text-[9.5px] sm:text-[10px] font-mono tracking-widest text-[#8C6D4F] uppercase">
             DARSHIL DETROJA // PORTFOLIO 2026
           </span>
-          <span className="text-[10px] font-mono text-[#8C6D4F]">
+          <span className="text-[9.5px] sm:text-[10px] font-mono text-[#8C6D4F]">
             © {new Date().getFullYear()} DARSHIL DETROJA • ENGINEERED WITH PRECISION
           </span>
         </div>

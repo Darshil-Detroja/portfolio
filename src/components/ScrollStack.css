@@ -7,8 +7,16 @@
 .scroll-stack-inner {
   position: relative;
   width: 100%;
-  padding-top: 4vh;
-  padding-bottom: 50vh; /* creates the runway so all cards stack and lock at the top */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* On desktop, provide the 50vh runway so cards can stack and lock */
+@media (min-width: 768px) {
+  .scroll-stack-inner {
+    padding-top: 4vh;
+    padding-bottom: 50vh;
+  }
 }
 
 .scroll-stack-card {
@@ -16,11 +24,26 @@
   width: 100%;
   box-sizing: border-box;
   transform-origin: top center;
-  will-change: transform, filter;
   backface-visibility: hidden;
   transform-style: preserve-3d;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
+}
+
+/* Mobile optimizations: eliminate all transforms & layout jitter, use clean native spacing */
+@media (max-width: 767px) {
+  .scroll-stack-card {
+    margin-bottom: 1.5rem !important;
+    transform: none !important;
+    filter: none !important;
+    will-change: auto !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .scroll-stack-card {
+    will-change: transform, filter;
+  }
 }
 
 .scroll-stack-end {
