@@ -1,3 +1,6 @@
+User-agent: Googlebot-Video
+Disallow: /videos/
+
 User-agent: *
 Allow: /
 
